@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "739269432876",
+    "firebase_url": "https://mevent-pbo.firebaseio.com",
+    "project_id": "mevent-pbo",
+    "storage_bucket": "mevent-pbo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739269432876:android:9c81fe4fb5db58eb",
+        "android_client_info": {
+          "package_name": "com.furqoncreative.mevent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739269432876-st4ho1nbgq3197qcfa9egupjgjk93k50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.furqoncreative.mevent",
+            "certificate_hash": "a3bfc81991c980e42a0f3e73f7f41fc7a54c4ece"
+          }
+        },
+        {
+          "client_id": "739269432876-qrb6gldj79pmuc8131gaam02ic665n7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYSbrvYgZ9V_zAPKKOVcg-GHK_oPnK-ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739269432876-qrb6gldj79pmuc8131gaam02ic665n7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
