@@ -2,6 +2,7 @@ package com.furqoncreative.mevent.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import com.furqoncreative.mevent.activity.EventDetailActivity;
 import com.furqoncreative.mevent.activity.SeminarDetailActivity;
 import com.furqoncreative.mevent.model.Event;
 import com.furqoncreative.mevent.model.Seminar;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,10 +44,11 @@ public class SeminarAdapter extends RecyclerView.Adapter<SeminarAdapter.MyViewHo
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
+        Uri url = Uri.parse(mData.get(position).getPoster());
+        Picasso.get().load(url).into(holder.img_poster);
         holder.tv_judul.setText(mData.get(position).getJudul());
         holder.tv_lokasi.setText(mData.get(position).getLokasi());
         holder.tv_tanggal.setText(mData.get(position).getTanggal());
-        holder.img_poster.setImageResource(mData.get(position).getPoster());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

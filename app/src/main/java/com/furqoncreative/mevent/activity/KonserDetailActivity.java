@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.furqoncreative.mevent.R;
+import com.squareup.picasso.Picasso;
 
 public class KonserDetailActivity extends AppCompatActivity {
 
@@ -35,7 +36,7 @@ public class KonserDetailActivity extends AppCompatActivity {
         String Artis = intent.getExtras().getString("Artis");
 
         String Deskripsi = intent.getExtras().getString("Deskripsi");
-        int image = intent.getExtras().getInt("Poster") ;
+        String image = intent.getExtras().getString("Poster") ;
 
         // Setting values
 
@@ -44,7 +45,7 @@ public class KonserDetailActivity extends AppCompatActivity {
         tvTangggal.setText(Tanggal);
         tvPengisi.setText("Dimeriahkan Oleh : " + Artis);
         tvdescription.setText(Deskripsi);
-        img.setImageResource(image);
+        Picasso.get().load(image).into(img);
 
 
     }

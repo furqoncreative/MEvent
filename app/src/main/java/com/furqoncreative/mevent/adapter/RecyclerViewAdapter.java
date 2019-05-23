@@ -1,19 +1,23 @@
 package com.furqoncreative.mevent.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.furqoncreative.mevent.R;
 import com.furqoncreative.mevent.activity.EventDetailActivity;
 import com.furqoncreative.mevent.model.Event;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -39,12 +43,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
+        Uri url = Uri.parse(mData.get(position).getPoster());
+        Picasso.get().load(url).into(holder.img_poster);
         holder.tv_judul.setText(mData.get(position).getJudul());
         holder.tv_lokasi.setText(mData.get(position).getLokasi());
         holder.tv_tanggal.setText(mData.get(position).getTanggal());
-        holder.img_poster.setImageResource(mData.get(position).getPoster());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -3,7 +3,7 @@ package com.furqoncreative.mevent.model;
 public class Konser extends Event {
     private String Artis;
 
-    public Konser(String judul, String tanggal, String lokasi, String deskripsi, int poster, String artis) {
+    public Konser(String judul, String tanggal, String lokasi, String deskripsi, String poster, String artis) {
         super(judul, tanggal, lokasi, deskripsi, poster);
         Artis = artis;
 

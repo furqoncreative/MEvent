@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.furqoncreative.mevent.R;
+import com.squareup.picasso.Picasso;
 
 public class LombaDetailActivity extends AppCompatActivity {
 
@@ -35,7 +36,7 @@ public class LombaDetailActivity extends AppCompatActivity {
 
         String Hadiah = intent.getExtras().getString("Hadiah");
         String Deskripsi = intent.getExtras().getString("Deskripsi");
-        int image = intent.getExtras().getInt("Poster") ;
+        String image = intent.getExtras().getString("Poster") ;
 
         // Setting values
 
@@ -44,7 +45,7 @@ public class LombaDetailActivity extends AppCompatActivity {
         tvTangggal.setText(Tanggal);
         tvHadiah.setText("Dengan Hadiah : "+Hadiah);
         tvdescription.setText(Deskripsi);
-        img.setImageResource(image);
+        Picasso.get().load(image).into(img);
 
 
     }

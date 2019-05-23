@@ -24,9 +24,8 @@ public class SeminarActivity extends AppCompatActivity {
 
 
         listEvent = new ArrayList<>();
-        listEvent.add(new Seminar("Seminar Nasional","20 Mei 2019","Bandung","Deskirpsi", "Bapak Jokowi",R.drawable.thevigitarian));
-        listEvent.add(new Seminar("Seminar Nasional","20 Mei 2019","Bandung","Deskirpsi", "Bapak Jokowi",R.drawable.thevigitarian));
-        listEvent.add(new Seminar("Seminar Nasional","20 Mei 2019","Bandung","Deskirpsi", "Bapak Jokowi",R.drawable.thevigitarian));
+        listEvent.add(new Seminar("Seminar Nasional","20 Mei 2019","Bandung","Deskirpsi", "Bapak Jokowi","https://eventkampus.com/data/event/0/595/poster-seminar-nasional-kewirausahaan.jpg"));
+        listEvent.add(new Seminar("Seminar Nasional","20 Mei 2019","Bandung","Deskirpsi", "Bapak Jokowi","https://www.fotojet.com/template-imgs/classic/poster/balanced-friendship-poster.jpg"));
 
 
 

@@ -23,9 +23,8 @@ public class LombaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lomba);
 
         listEvent = new ArrayList<>();
-        listEvent.add(new Lomba("Hackaton 2019","25 Mei 2019","Bandung","Deskirpsi",R.drawable.thevigitarian,"Rp. 100.000.000"));
-        listEvent.add(new Lomba("Hackaton 2019","25 Mei 2019","Bandung","Deskirpsi",R.drawable.thevigitarian,"Rp. 100.000.000"));
-        listEvent.add(new Lomba("Hackaton 2019","25 Mei 2019","Bandung","Deskirpsi",R.drawable.thevigitarian,"Rp. 100.000.000"));
+        listEvent.add(new Lomba("Hackaton 2019","25 Mei 2019","Bandung","Deskirpsi","http://knowafest.com/files/uploads/Geekathon-2017121708.jpg","Rp. 100.000.000"));
+        listEvent.add(new Lomba("Hackaton 2019","25 Mei 2019","Bandung","Deskirpsi","https://events.248am.com/wp-content/uploads/2018/03/HACK.jpg","Rp. 100.000.000"));
 
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
         LombaAdapter myAdapter = new LombaAdapter(this,listEvent);

@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.furqoncreative.mevent.R;
+import com.squareup.picasso.Picasso;
 
 public class SeminarDetailActivity extends AppCompatActivity {
 
@@ -33,7 +34,7 @@ public class SeminarDetailActivity extends AppCompatActivity {
         String Tanggal = intent.getExtras().getString("Tanggal");
         String Speaker = intent.getExtras().getString("Speaker");
         String Deskripsi = intent.getExtras().getString("Deskripsi");
-        int image = intent.getExtras().getInt("Poster") ;
+        String image = intent.getExtras().getString("Poster") ;
 
         // Setting values
 
@@ -42,7 +43,7 @@ public class SeminarDetailActivity extends AppCompatActivity {
         tvTangggal.setText(Tanggal);
         tvPengisi.setText("Diisi Oleh : " + Speaker);
         tvdescription.setText(Deskripsi);
-        img.setImageResource(image);
+        Picasso.get().load(image).into(img);
 
 
     }

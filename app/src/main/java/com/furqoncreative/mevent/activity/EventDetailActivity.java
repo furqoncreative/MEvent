@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.furqoncreative.mevent.R;
+import com.squareup.picasso.Picasso;
 
 public class EventDetailActivity extends AppCompatActivity {
 
@@ -32,21 +33,16 @@ public class EventDetailActivity extends AppCompatActivity {
         String Judul = intent.getExtras().getString("Judul");
         String Lokasi = intent.getExtras().getString("Lokasi");
         String Tanggal = intent.getExtras().getString("Tanggal");
-        String Artis = intent.getExtras().getString("Artis");
-        String Speaker = intent.getExtras().getString("Speaker");
-        String Hadiah = intent.getExtras().getString("Hadiah");
         String Deskripsi = intent.getExtras().getString("Deskripsi");
-        int image = intent.getExtras().getInt("Poster") ;
+        String image = intent.getExtras().getString("Poster") ;
 
         // Setting values
 
         tvtitle.setText(Judul);
         tvLokasi.setText(Lokasi);
         tvTangggal.setText(Tanggal);
-        tvPengisi.setText("Dimeriahkan Oleh : " + Artis);
-        tvHadiah.setText("Dengan Hadiah : "+Hadiah);
         tvdescription.setText(Deskripsi);
-        img.setImageResource(image);
+        Picasso.get().load(image).into(img);
 
 
     }

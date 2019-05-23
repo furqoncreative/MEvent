@@ -1,5 +1,7 @@
 package com.furqoncreative.mevent.model;
 
+import android.net.Uri;
+
 /**
  * Created by Aws on 28/01/2018.
  */
@@ -10,12 +12,12 @@ public class Event {
     private String Tanggal;
     private String Lokasi ;
     private String Deskripsi ;
-    private int Poster ;
+    private String Poster ;
 
     public Event() {
     }
 
-    public Event(String judul, String tanggal, String lokasi, String deskripsi, int poster) {
+    public Event(String judul, String tanggal, String lokasi, String deskripsi, String poster) {
 
         Judul = judul;
         Tanggal = tanggal;
@@ -41,7 +43,7 @@ public class Event {
         return Deskripsi;
     }
 
-    public int getPoster() {
+    public String getPoster() {
         return Poster;
     }
 
@@ -62,7 +64,7 @@ public class Event {
         Deskripsi = deskripsi;
     }
 
-    public void setPoster(int poster) {
+    public void setPoster(String poster) {
         Poster = poster;
     }
 }
